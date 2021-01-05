@@ -1,0 +1,41 @@
+// index.html
+// text colors:
+//     #212121 - main (nav, h, logo color2)
+//     #757575 - auxiliary (p, nav button adres/phone)
+//     #2196f3 - accent (logo color1, activ)
+//     #FFFFFF - footer h, footer logo color1, hero caption
+//     #FFFFFF 60%  - futer p
+// backgrunds colors:
+//     #FFFFFF - nav, cards
+//     #2196f3 - button
+//     #E5E5E5 - section
+//     #F5F4FA - section alternative
+//     #2F303A - footer:
+
+// portfolio.html
+// text colors:
+//     #212121 - main (nav, h, logo color2, unhovered filters)
+//     #757575 - auxiliary (p, nav button adres/phone)
+//     #2196f3 - logo color1, activ nav
+//     #FFFFFF - footer h, footer logo color1, hovered filters
+//     #FFFFFF 60%  - futer p:
+// backgrunds colors:
+//     #FFFFFF - nav, cards
+//     #ECECEC -portfolio line "heder-section"
+//     #E5E5E5 - section
+//     #F5F4FA - unhovered filters
+//     #2196f3 - hovered filters
+//     #EEEEEE cards border
+//     #2F303A - footer:
+
+$main-text-color: #212121;
+$auxiliary-text-color: #757575;
+$accent-color: #2196f3;
+$section-bg-color: #f5f4fa;
+$additional-color: #ffffff;
+$second-additional-color: rgba(255, 255, 255, 0.6);
+$unaccent-color: #afb1b8;
+$button-hover-color: #188ce8;
+
+$main-font: "Roboto", sans-serif;
+$logo-font: "Releway", sans-serif;

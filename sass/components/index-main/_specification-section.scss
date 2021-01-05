@@ -1,0 +1,29 @@
+.section-specification {
+  padding-bottom: 94px;
+}
+.specification-list {
+  display: flex;
+}
+.specification-list__item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.specification-list__item {
+  position: relative;
+}
+.specification-list__heading {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  line-height: 1.17;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: $additional-color;
+  background: rgba(47, 48, 58, 0.8);
+}

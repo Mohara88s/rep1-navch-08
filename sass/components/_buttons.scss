@@ -1,0 +1,29 @@
+// buttons
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  min-width: 200px;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: $additional-color;
+  fill: currentColor;
+  background-color: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  @include trans-func();
+
+  &__icon {
+    margin-left: 10px;
+  }
+  &--hovering {
+    &:hover,
+    &:focus {
+      background-color: $button-hover-color;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// utils
+@import "../sass/utils/fonts";
+@import "../sass/utils/normalize";
+@import "../sass/utils/variables";
+@import "../sass/utils/trans-func-mixin";
+@import "../sass/utils/common";
+
+// components
+@import "../sass/components/special";
+@import "../sass/components/logo";
+@import "../sass/components/buttons";
+@import "../sass/components/social-links";
+@import "../sass/components/header";
+@import "../sass/components/footer";
+
+// index
+@import "../sass/components/index-main/hero-sectiom";
+@import "../sass/components/index-main/benefits-section";
+@import "../sass/components/index-main/specification-section";
+@import "../sass/components/index-main/teem-saction";
+@import "../sass/components/index-main/clients-section";
+@import "../sass/components/index-main/modal";
+
+// portfolio
+@import "../sass/components/portfolio-main/projects-section";

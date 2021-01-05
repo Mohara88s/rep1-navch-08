@@ -1,0 +1,11 @@
+// logo
+.logo {
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  &__span {
+    color: $accent-color;
+  }
+}
