@@ -1,5 +1,9 @@
 .section-specification {
+  display: none;
   padding-bottom: 94px;
+  @media all and (min-width: 1200px) {
+    display: inherit;
+  }
 }
 .specification-list {
   display: flex;
