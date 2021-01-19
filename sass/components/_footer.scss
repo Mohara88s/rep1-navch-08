@@ -17,6 +17,8 @@
   @media all and (min-width: 768px) {
     width: fit-content;
   }
+  display: inline-block;
+
   // margin-right: 70px;
 }
 .footer__logo {
@@ -45,7 +47,9 @@
 }
 .footer__social {
   // margin-right: auto;
+
   margin-bottom: 60px;
+  display: inline-block;
 }
 .footer__social-links {
   display: inline-flex;

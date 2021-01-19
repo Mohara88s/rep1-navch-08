@@ -1,53 +1,16 @@
 .clients-section {
   padding-top: 60px;
   padding-bottom: 60px;
-  @media all and (min-width: 1200px) {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
 }
+
 .clients-list {
   display: flex;
   flex-wrap: wrap;
 }
-.clients-list__item {
-  &:not(:nth-child(2n)) {
-    @media all and (min-width: 480px) {
-      margin-right: 30px;
-    }
-  }
-  &:not(:nth-last-child(-n + 2)) {
-    @media all and (min-width: 480px) {
-      margin-bottom: 30px;
-    }
-  }
 
-  &:not(:nth-child(3n)) {
-    @media all and (min-width: 768px) {
-      margin-right: 30px;
-    }
-  }
-  &:not(:nth-last-child(-n + 3)) {
-    @media all and (min-width: 768px) {
-      margin-bottom: 30px;
-    }
-  }
-
-  &:not(:last-child) {
-    @media all and (min-width: 1200px) {
-      margin-right: 30px;
-    }
-  }
-}
 .clients-list__link {
-  width: 210px;
+  width: calc(100vw - 30px);
   height: 90px;
-  @media all and (min-width: 768px) {
-    width: 226px;
-  }
-  @media all and (min-width: 1200px) {
-    width: 170px;
-  }
   box-sizing: border-box;
   border-radius: 4px;
   display: flex;
@@ -63,5 +26,62 @@
   &:focus {
     fill: $accent-color;
     border: 1px solid $accent-color;
+  }
+}
+@media all and (max-width: 479px) {
+  .clients-list__item {
+    margin-left: auto;
+    margin-right: auto;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .clients-list__link {
+    width: 210px;
+  }
+
+  .clients-list__item {
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .clients-list__item {
+    &:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
+    &:not(:nth-last-child(-n + 3)) {
+      margin-bottom: 30px;
+    }
+
+    .clients-list__link {
+      width: 226px;
+    }
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .clients-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .clients-list__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .clients-list__link {
+    width: 170px;
   }
 }
