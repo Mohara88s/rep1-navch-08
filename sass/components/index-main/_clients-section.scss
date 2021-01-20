@@ -6,6 +6,8 @@
 .clients-list {
   display: flex;
   flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .clients-list__link {
@@ -29,17 +31,15 @@
   }
 }
 @media all and (max-width: 479px) {
-  .clients-list__item {
-    margin-left: auto;
-    margin-right: auto;
-
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
 @media all and (min-width: 480px) and (max-width: 767px) {
+  .clients-list {
+    width: 450px;
+  }
   .clients-list__link {
     width: 210px;
   }
@@ -55,6 +55,10 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1199px) {
+  .clients-list {
+    width: 738px;
+  }
+
   .clients-list__item {
     &:not(:nth-child(3n)) {
       margin-right: 30px;

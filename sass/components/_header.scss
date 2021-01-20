@@ -13,6 +13,18 @@
 .header__button {
   background-color: transparent;
 }
+.menu-button__close-icon {
+  display: none;
+  & .is-open {
+    display: block;
+  }
+}
+
+.menu-button__menu-icon {
+  & .is-open {
+    display: none;
+  }
+}
 
 // .nav-list {
 //   display: flex;

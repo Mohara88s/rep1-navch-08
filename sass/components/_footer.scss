@@ -2,54 +2,32 @@
   background-color: #2f303a;
 }
 .footer__container {
-  // display: flex;
   text-align: center;
   padding-top: 60px;
   padding-bottom: 60px;
-  align-items: baseline;
   color: $additional-color;
-  @media all and (min-width: 768px) {
-    padding-left: 76px;
-    padding-right: 89px;
-  }
 }
 .footer__logo-address {
-  @media all and (min-width: 768px) {
-    width: fit-content;
-  }
   display: inline-block;
-
-  // margin-right: 70px;
 }
 .footer__logo {
   margin-bottom: 20px;
   display: block;
-  // margin-left: 115px;
 }
 
 .address {
-  // display: flex;
-  // flex-direction: column;
   font-style: normal;
   line-height: 1.71;
   margin-bottom: 60px;
 }
 .address__link {
-  // width: fit-content;
-
   &:not(:first-child) {
     margin-top: 8px;
-    @media all and (min-width: 1200px) {
-      margin-top: 9px;
-    }
     color: $second-additional-color;
   }
 }
 .footer__social {
-  // margin-right: auto;
-
   margin-bottom: 60px;
-  display: inline-block;
 }
 .footer__social-links {
   display: inline-flex;
@@ -74,13 +52,8 @@
   align-items: center;
 }
 .subscribe-form__input {
-  @media all and (min-width: 480px) {
-    width: 450px;
-  }
+  width: calc(100vw - 30px);
   margin-bottom: 20px;
-  // margin-right: 10px;
-
-  // width: 358px;
   height: 50px;
   padding-left: 16px;
   background-color: transparent;
@@ -90,4 +63,67 @@
   line-height: 1.25;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+}
+
+@media all and (min-width: 480px) {
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .subscribe-form__input {
+    width: 450px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .footer__container {
+    padding-left: 76px;
+    padding-right: 89px;
+    position: relative;
+  }
+
+  .footer__logo-address {
+    width: fit-content;
+  }
+
+  .footer__social {
+    position: absolute;
+    top: 65px;
+    right: 89px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .footer__container {
+    flex-direction: row;
+    align-items: baseline;
+    text-align: left;
+  }
+  .footer__logo-address {
+    margin-right: 70px;
+  }
+  .address__link {
+    width: fit-content;
+
+    &:not(:first-child) {
+      margin-top: 9px;
+    }
+  }
+
+  .address {
+    margin-bottom: 0;
+  }
+  .footer__social {
+    margin-right: auto;
+  }
+
+  .subscribe-form {
+    flex-direction: row;
+  }
+
+  .subscribe-form__input {
+    margin-right: 10px;
+    margin-bottom: 0;
+    width: 358px;
+  }
 }
