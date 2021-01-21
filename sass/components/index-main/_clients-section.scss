@@ -6,6 +6,7 @@
 .clients-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -31,11 +32,12 @@
   }
 }
 @media all and (max-width: 479px) {
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  .clients-list__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
-
 @media all and (min-width: 480px) and (max-width: 767px) {
   .clients-list {
     width: 450px;

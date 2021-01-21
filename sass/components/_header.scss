@@ -2,51 +2,22 @@
   padding-top: 0;
   padding-bottom: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   box-shadow: 0px 1px 1px #ececec;
+  position: relative;
 }
 .header__logo {
   padding-top: 16px;
   padding-bottom: 16px;
 }
-.header__button {
-  background-color: transparent;
-}
-.menu-button__close-icon {
-  display: none;
-  & .is-open {
-    display: block;
-  }
-}
 
-.menu-button__menu-icon {
-  & .is-open {
-    display: none;
-  }
+.head-cont-list__icon {
+  display: inline;
+  margin-right: 10px;
 }
-
-// .nav-list {
-//   display: flex;
-// }
-// .nav-list__item,
-// .head-cont-list__item {
-//   &:not(:last-child) {
-//     margin-right: 50px;
-//   }
-// }
-// .head-cont-list {
-//   display: flex;
-//   margin-left: auto;
-// }
-// .head-cont-list__icon {
-//   margin-right: 10px;
-// }
 .nav-list__link,
 .head-cont-list__link {
-  // position: relative;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  position: relative;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -55,8 +26,8 @@
 .head-cont-list__link {
   color: $auxiliary-text-color;
   fill: currentColor;
-  // display: flex;
-  // align-items: center;
+  display: flex;
+  align-items: center;
 }
 .nav-list__link,
 .head-cont-list__link {
@@ -69,6 +40,7 @@
 .nav-list__link--selected-page {
   color: $accent-color;
   position: relative;
+  padding-bottom: 8px;
 
   &::before {
     content: '';
@@ -80,5 +52,137 @@
     height: 4px;
     background-color: $accent-color;
     border-radius: 2px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    justify-content: space-between;
+  }
+  .header__button {
+    background-color: transparent;
+  }
+  .menu-button,
+  .menu-button {
+    fill: $main-text-color;
+    @include trans-func();
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
+  }
+  .menu-button__menu-icon {
+    display: none;
+    .menu-button.is-open & {
+      display: block;
+    }
+  }
+
+  .menu-button__close-icon {
+    .menu-button.is-open & {
+      display: none;
+    }
+  }
+  .header__nav-container {
+    z-index: 100;
+    display: none;
+    &.is-open {
+      display: block;
+    }
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $additional-color;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+    text-align: center;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .nav-list__item {
+    margin-bottom: 40px;
+  }
+  .head-cont-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .head-cont-list__item {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  .header__nav-container {
+    font-size: 18px;
+    line-height: 1.17;
+  }
+}
+@media all and (min-width: 768px) {
+  .header__logo {
+    margin-right: 88px;
+  }
+  .header__button {
+    display: none;
+  }
+  .header__nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+
+    font-size: 14px;
+    line-height: 1.14;
+  }
+  .nav-list__item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  .nav-list__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .head-cont-list {
+    font-size: 12px;
+    line-height: 1.17;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+  }
+  .head-cont-list__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+@media all and (min-width: 1200px) {
+  .header__logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+  .head-cont-list {
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+  .head-cont-list__item {
+    &:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
   }
 }
