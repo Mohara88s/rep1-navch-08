@@ -17,11 +17,9 @@
 }
 
 .modal-order {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
+  margin: auto;
 
-  transform: translate(-50%, -50%) scale(1);
   @include trans-func();
 
   width: 100vw;
@@ -192,6 +190,10 @@
 
 @media all and (min-width: 1200px) {
   .modal-order {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
     width: 528px;
   }
 
