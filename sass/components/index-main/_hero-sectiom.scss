@@ -1,16 +1,30 @@
 .hero-section {
   padding-top: 118px;
   padding-bottom: 118px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1600px;
+  // вважаю що позиція повинна бути
+  // хоч по макету немає
+  background-position: 50% 50%;
+  text-align: center;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url('../images/hero.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-width: 1600px;
-  background-position: 50% 50%;
-  text-align: center;
+    url('../images/hero/hero-mobile@1x.jpg');
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/hero/hero-mobile@2x.jpg');
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    background-image: url('../images/hero/hero-mobile@3x.jpg');
+  }
 }
 
 .hero-section__heading {
@@ -33,10 +47,42 @@
   margin-left: auto;
 }
 
+@media all and (min-width: 768px) {
+  .hero-section {
+    background-image: url('../images/hero/hero-tablet@1x.jpg');
+
+    @media all and (min-device-pixel-ratio: 2),
+      all and (min-resolution: 192dpi),
+      all and (min-resolution: 2dppx) {
+      background-image: url('../images/hero/hero-tablet@2x.jpg');
+    }
+
+    @media all and (min-device-pixel-ratio: 3),
+      all and (min-resolution: 288dpi),
+      all and (min-resolution: 3dppx) {
+      background-image: url('../images/hero/hero-tablet@3x.jpg');
+    }
+  }
+}
+
 @media all and (min-width: 1200px) {
   .hero-section {
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: url('../images/hero/hero-desktop@1x.jpg');
+
+    @media all and (min-device-pixel-ratio: 2),
+      all and (min-resolution: 192dpi),
+      all and (min-resolution: 2dppx) {
+      background-image: url('../images/hero/hero-desktop@2x.jpg');
+    }
+    @media all and (min-device-pixel-ratio: 3),
+      all and (min-resolution: 288dpi),
+      all and (min-resolution: 3dppx) {
+      background-image: url('../images/hero/hero-desktop@3x.jpg');
+    }
   }
 
   .hero-section__heading {
